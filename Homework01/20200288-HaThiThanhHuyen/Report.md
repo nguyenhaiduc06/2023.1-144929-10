@@ -24,4 +24,4 @@
 ![Git Branch]](image/branch.png)
 
 ## Merge branch 
-![Git merge](image/merge.png)
+![Git Merge](image/merge.png)
