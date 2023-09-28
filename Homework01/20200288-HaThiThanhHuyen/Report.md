@@ -21,7 +21,7 @@
 ## Merge (resolve conflict)
 
 ## Create branch
-![Git Branch]](image/branch.png)
+![Git Branch](image/branch.png)
 
 ## Merge branch 
 ![Git Merge](image/merge.png)
