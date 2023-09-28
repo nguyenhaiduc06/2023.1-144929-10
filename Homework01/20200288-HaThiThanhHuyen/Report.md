@@ -7,6 +7,7 @@
 ![Git restore](image/remove.png)
 
 ## Modify
+![Git amend](image/modify.png)
 
 ## Commit
 ![Git commit](image/image.png)
