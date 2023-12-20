@@ -1,19 +1,17 @@
 package com.example.pmchamcong.service.hrsystem;
-
-import com.example.pmchamcong.entity.Department;
-import com.example.pmchamcong.entity.Employee;
-import com.example.pmchamcong.entity.Unit;
+import com.example.pmchamcong.service.hrsystem.entity.Worker;
 import com.example.pmchamcong.service.hrsystem.entity.WorkerUnit;
 
 import java.util.ArrayList;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class HRSystem implements IHRSystem {
-    private final ArrayList<Employee> employees = seedEmployees();
-    private final ArrayList<WorkerUnit> workerUnits = seedWorkerUnits();
+    private final ArrayList<Worker> workers = new ArrayList<>();
+    private final ArrayList<WorkerUnit> workerUnits = new ArrayList<>();
 
     public HRSystem() {
-        this.seedWorkerUnits();
-        this.seedEmployees();
+        this.seed();
     }
 
     @Override
@@ -21,79 +19,65 @@ public class HRSystem implements IHRSystem {
         return workerUnits;
     }
 
-    @Override
-    public Employee getEmployeeById(String id) {
-        return employees.get(1);
-    }
 
     @Override
-    public ArrayList<Employee> getEmployeesByUnit(WorkerUnit workerUnit) {
-        return this.employees;
-    }
+    public ArrayList<Worker> getEmployeesByUnit(WorkerUnit workerUnit) {
+        ArrayList<Worker> filteredWorkers = new ArrayList<>();
+        for (Worker worker: workers) {
+            if (Objects.equals(worker.getUnit().getName(), workerUnit.getName())) {
+                filteredWorkers.add(worker);
+            }
+        }
+        return filteredWorkers;
 
-    private ArrayList<WorkerUnit> seedWorkerUnits() {
-        ArrayList<WorkerUnit> workerUnits = new ArrayList<>();
+    }
+    private void seed() {
         WorkerUnit cn1 = new WorkerUnit("CN1");
         WorkerUnit cn2 = new WorkerUnit("CN2");
         WorkerUnit cn3 = new WorkerUnit("CN3");
         workerUnits.add(cn1);
         workerUnits.add(cn2);
         workerUnits.add(cn3);
-        return workerUnits;
-    }
 
-    private ArrayList<Employee> seedEmployees() {
-        ArrayList<Employee> employees = new ArrayList<>();
-        Department cn = new Department("Cong nhan");
-        Department vp = new Department("Van phong");
-
-        Unit marketing = new Unit("Marketing", vp);
-        Unit sales = new Unit("Sales", vp);
-        Unit it = new Unit("Information Technology", vp);
-        Unit scm = new Unit("Supply Chain Management", cn);
-        Unit fm = new Unit("Facilities Management", cn);
-
-        Employee e1 = new Employee("EM001", "Sophie Anderson", it);
-        Employee e2 = new Employee("EM002", "Ryan Smith", marketing);
-        Employee e3 = new Employee("EM003", "Ella Miller", marketing);
-        Employee e4 = new Employee("EM004", "David Rodriguez", sales);
-        Employee e5 = new Employee("EM005", "Grace Walker", sales);
-        Employee e6 = new Employee("EM006", "Jordan Turner", fm);
-        Employee e7 = new Employee("EM007", "Ava Moore", fm);
-        Employee e8 = new Employee("EM008", "Mason Brooks", scm);
-        Employee e9 = new Employee("EM009", "Isabella Harris", fm);
-        Employee e10 = new Employee("EM010", "Caleb Bennett", it);
-        Employee e11 = new Employee("EM011", "Zoe Carter", it);
-        Employee e12 = new Employee("EM012", "Leo Reed", fm);
-        Employee e13 = new Employee("EM013", "Chloe Price", marketing);
-        Employee e14 = new Employee("EM014", "Nathan King", scm);
-        Employee e15 = new Employee("EM015", "Emma Cooper", sales);
-        Employee e16 = new Employee("EM016", "Liam Turner", scm);
-        Employee e17 = new Employee("EM017", "Mia Mitchell", scm);
-        Employee e18 = new Employee("EM018", "Lucas Wright", marketing);
-        Employee e19 = new Employee("EM019", "Aria Foster", it);
-        Employee e20 = new Employee("EM020", "Jackson Hayes", marketing);
-        employees.add(e1);
-        employees.add(e2);
-        employees.add(e3);
-        employees.add(e4);
-        employees.add(e5);
-        employees.add(e6);
-        employees.add(e7);
-        employees.add(e8);
-        employees.add(e9);
-        employees.add(e10);
-        employees.add(e11);
-        employees.add(e12);
-        employees.add(e13);
-        employees.add(e14);
-        employees.add(e15);
-        employees.add(e16);
-        employees.add(e17);
-        employees.add(e18);
-        employees.add(e19);
-        employees.add(e20);
-
-        return employees;
+        Worker e1 = new Worker("EM001", "Sophie Anderson", cn1);
+        Worker e2 = new Worker("EM002", "Ryan Smith", cn1);
+        Worker e3 = new Worker("EM003", "Ella Miller", cn1);
+        Worker e4 = new Worker("EM004", "David Rodriguez", cn1);
+        Worker e5 = new Worker("EM005", "Grace Walker", cn1);
+        Worker e6 = new Worker("EM006", "Jordan Turner", cn1);
+        Worker e7 = new Worker("EM007", "Ava Moore", cn2);
+        Worker e8 = new Worker("EM008", "Mason Brooks", cn2);
+        Worker e9 = new Worker("EM009", "Isabella Harris", cn2);
+        Worker e10 = new Worker("EM010", "Caleb Bennett", cn2);
+        Worker e11 = new Worker("EM011", "Zoe Carter", cn2);
+        Worker e12 = new Worker("EM012", "Leo Reed", cn2);
+        Worker e13 = new Worker("EM013", "Chloe Price", cn3);
+        Worker e14 = new Worker("EM014", "Nathan King", cn3);
+        Worker e15 = new Worker("EM015", "Emma Cooper", cn3);
+        Worker e16 = new Worker("EM016", "Liam Turner", cn3);
+        Worker e17 = new Worker("EM017", "Mia Mitchell", cn3);
+        Worker e18 = new Worker("EM018", "Lucas Wright", cn3);
+        Worker e19 = new Worker("EM019", "Aria Foster", cn3);
+        Worker e20 = new Worker("EM020", "Jackson Hayes", cn3);
+        workers.add(e1);
+        workers.add(e2);
+        workers.add(e3);
+        workers.add(e4);
+        workers.add(e5);
+        workers.add(e6);
+        workers.add(e7);
+        workers.add(e8);
+        workers.add(e9);
+        workers.add(e10);
+        workers.add(e11);
+        workers.add(e12);
+        workers.add(e13);
+        workers.add(e14);
+        workers.add(e15);
+        workers.add(e16);
+        workers.add(e17);
+        workers.add(e18);
+        workers.add(e19);
+        workers.add(e20);
     }
 }

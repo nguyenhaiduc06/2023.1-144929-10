@@ -6,10 +6,10 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -18,19 +18,20 @@
    <top>
       <VBox prefHeight="42.0" prefWidth="600.0" spacing="16.0">
          <children>
-            <Label text="Báo cáo chấm công công nhân">
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
-               <font>
-                  <Font name="SF Pro Text Bold" size="18.0" />
-               </font>
-            </Label>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="23.0" prefWidth="479.0" text="Báo cáo đơn vị công nhân">
+                     <font>
+                        <Font name="SF Pro Text Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button alignment="BOTTOM_RIGHT" mnemonicParsing="false" onAction="#export" text="Xuất báo cáo" />
+               </children>
+            </HBox>
             <GridPane hgap="16.0" VBox.vgrow="ALWAYS">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
               </columnConstraints>
               <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -39,20 +40,15 @@
                   <VBox prefHeight="200.0" prefWidth="100.0">
                      <children>
                         <Label text="Đơn vị" />
-                        <ComboBox fx:id="cbUnits" prefHeight="26.0" prefWidth="241.0" />
+                        <ComboBox fx:id="cbUnits" prefHeight="26.0" prefWidth="322.0" />
                      </children>
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
                      <children>
                         <Label text="Tháng" />
-                        <ComboBox fx:id="cbMonths" prefHeight="26.0" prefWidth="268.0" />
+                        <ComboBox fx:id="cbMonths" prefHeight="26.0" prefWidth="296.0" />
                      </children>
                   </VBox>
-                  <AnchorPane GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="BASELINE" GridPane.vgrow="ALWAYS">
-                     <children>
-                        <Button alignment="BOTTOM_RIGHT" mnemonicParsing="false" onAction="#export" text="Xuất báo cáo" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                     </children>
-                  </AnchorPane>
                </children>
                <VBox.margin>
                   <Insets bottom="16.0" top="16.0" />

@@ -1,6 +1,8 @@
 package com.example.pmchamcong.service.csv;
 
 import com.opencsv.CSVWriter;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -8,8 +10,7 @@ import java.io.IOException;
 import java.util.List;
 
 public class CSVManipulator {
-    public static void exportDataToCSV(CSVData data, String fileName) {
-        String filePath = fileName + ".csv";
+    public static void exportDataToCSV(CSVData data, String filePath) {
         File file = new File(filePath);
         try {
             // create FileWriter object with file as parameter
@@ -28,7 +29,8 @@ public class CSVManipulator {
             // closing writer connection
             writer.close();
 
-            System.out.println("Successfully exported data to CSV file");
+            Alert alert = new Alert(Alert.AlertType.INFORMATION, "Successfully exported data to " + filePath, ButtonType.OK);
+            alert.showAndWait();
         }
         catch (IOException e) {
             // TODO Auto-generated catch block

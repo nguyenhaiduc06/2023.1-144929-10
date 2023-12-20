@@ -6,36 +6,52 @@ import com.example.pmchamcong.service.excel.ExcelManipulator;
 import com.example.pmchamcong.service.excel.XLSData;
 import com.example.pmchamcong.service.hrsystem.IHRSystem;
 import com.example.pmchamcong.service.hrsystem.entity.WorkerUnit;
-import com.example.pmchamcong.service.timekeeping.worker.IWorkerUnitTimekeepingReportService;
-import com.example.pmchamcong.service.timekeeping.worker.entity.WorkerTimekeepingResult;
-import com.example.pmchamcong.service.timekeeping.worker.entity.WorkerUnitTimekeepingReport;
+import com.example.pmchamcong.service.timekeeping.report.worker.IWorkerUnitTimekeepingReportService;
+import com.example.pmchamcong.service.timekeeping.report.worker.entity.WorkerTimekeepingSummary;
+import com.example.pmchamcong.service.timekeeping.report.worker.entity.WorkerUnitTimekeepingReport;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
 
 import java.io.File;
-import java.io.IOException;
-import java.util.List;
+import java.time.Month;
 import java.util.Objects;
 
 public class ExportWorkerUnitReportController {
     @FXML
     private ComboBox<WorkerUnit> cbUnits;
     @FXML
-    private ComboBox<String> cbMonths;
+    private ComboBox<Month> cbMonths;
     @FXML
     private ComboBox<String> cbFormat;
+    @FXML
+    private Label lbFolder;
+    @FXML
+    private TableView<WorkerTimekeepingSummary> table;
+    @FXML
+    private TableColumn<WorkerTimekeepingSummary, String> clId;
+    @FXML
+    private TableColumn<WorkerTimekeepingSummary, String> clName;
+    @FXML
+    private TableColumn<WorkerTimekeepingSummary, String> clUnit;
+    @FXML
+    private TableColumn<WorkerTimekeepingSummary, Number> clTotalWorkHour;
+    @FXML
+    private TableColumn<WorkerTimekeepingSummary, Number> clTotalOTHour;
     private Stage stage;
     private IHRSystem hrSystem;
     private IWorkerUnitTimekeepingReportService reportService;
     private WorkerUnitTimekeepingReport report;
     private WorkerUnit selectedUnit;
-    private String selectedMonth;
+    private Month selectedMonth;
     private String selectedFormat;
     private String selectedFolder;
 
@@ -45,7 +61,12 @@ public class ExportWorkerUnitReportController {
         this.reportService = reportService;
         populateComboBoxes();
     }
-
+    public void selectDefaultUnit(WorkerUnit unit) {
+        cbUnits.setValue(unit);
+    }
+    public void selectDefaultMonth(Month month) {
+        cbMonths.setValue(month);
+    }
     public void choseDirectory() {
         // Create a DirectoryChooser
         DirectoryChooser directoryChooser = new DirectoryChooser();
@@ -62,6 +83,8 @@ public class ExportWorkerUnitReportController {
         // Check if a folder was selected
         if (selectedDirectory != null) {
             // Perform actions with the selected folder
+            selectedFolder = selectedDirectory.getAbsolutePath();
+            lbFolder.setText(selectedFolder);
             System.out.println("Folder selected: " + selectedDirectory.getAbsolutePath());
         } else {
             System.out.println("No folder selected.");
@@ -71,11 +94,11 @@ public class ExportWorkerUnitReportController {
     public void export() {
         if (Objects.equals(selectedFormat, "CSV")) {
             CSVData data = reportService.createCSVData(report);
-            CSVManipulator.exportDataToCSV(data, selectedFolder + "Report");
+            CSVManipulator.exportDataToCSV(data, selectedFolder + "/Report.csv");
         }
         if (Objects.equals(selectedFormat, "XLS")) {
             XLSData data = reportService.createXLSData(report);
-            ExcelManipulator.exportDataToXLSX(data, "Report");
+            ExcelManipulator.exportDataToXLSX(data, selectedFolder + "Report.xls");
         }
     }
 
@@ -87,10 +110,19 @@ public class ExportWorkerUnitReportController {
             fetchAndDisplayData();
         }));
 
-        ObservableList<String> months = FXCollections.observableArrayList();
-        for (int i = 0; i <= 12; i++) {
-            months.add(String.format("Tháng %d", i));
-        }
+        ObservableList<Month> months = FXCollections.observableArrayList();
+        months.add(Month.JANUARY);
+        months.add(Month.FEBRUARY);
+        months.add(Month.MARCH);
+        months.add(Month.APRIL);
+        months.add(Month.MAY);
+        months.add(Month.JUNE);
+        months.add(Month.JULY);
+        months.add(Month.AUGUST);
+        months.add(Month.SEPTEMBER);
+        months.add(Month.OCTOBER);
+        months.add(Month.NOVEMBER);
+        months.add(Month.DECEMBER);
         cbMonths.setItems(months);
         cbMonths.valueProperty().addListener(((observableValue, oldValue, newValue) -> {
             selectedMonth = observableValue.getValue();
@@ -101,19 +133,18 @@ public class ExportWorkerUnitReportController {
         cbFormat.valueProperty().addListener(((observableValue, oldValue, newValue) -> {
             selectedFormat = observableValue.getValue();
         }));
+        cbFormat.setValue("CSV");
     }
 
     private void fetchAndDisplayData() {
-        if (selectedUnit == null) return;
-        System.out.println("Fetching");
-        System.out.println(selectedUnit.getName());
-        report = reportService.getReport(selectedUnit);
-        ObservableList<WorkerTimekeepingResult> results = FXCollections.observableArrayList(report.getResults());
-//        clId.setCellValueFactory(c -> new SimpleStringProperty(c.getValue().getEmployee().getId()));
-//        clName.setCellValueFactory(c -> new SimpleStringProperty(c.getValue().getEmployee().getName()));
-//        clUnit.setCellValueFactory(c -> new SimpleStringProperty(c.getValue().getEmployee().getUnit().getName()));
-//        clTotalWorkHour.setCellValueFactory(c -> new SimpleIntegerProperty(c.getValue().getTotalWorkHour()));
-//        clTotalOTHour.setCellValueFactory(c -> new SimpleIntegerProperty(c.getValue().getTotalOTHour()));
-//        table.setItems(results);
+        if (selectedUnit == null || selectedMonth == null) return;
+        report = reportService.getReport(selectedUnit, selectedMonth);
+        ObservableList<WorkerTimekeepingSummary> results = FXCollections.observableArrayList(report.getSummaries());
+        clId.setCellValueFactory(c -> new SimpleStringProperty(c.getValue().getEmployee().getId()));
+        clName.setCellValueFactory(c -> new SimpleStringProperty(c.getValue().getEmployee().getName()));
+        clUnit.setCellValueFactory(c -> new SimpleStringProperty(c.getValue().getEmployee().getUnit().getName()));
+        clTotalWorkHour.setCellValueFactory(c -> new SimpleIntegerProperty(c.getValue().getTotalWorkHour()));
+        clTotalOTHour.setCellValueFactory(c -> new SimpleIntegerProperty(c.getValue().getTotalOTHour()));
+        table.setItems(results);
     }
 }

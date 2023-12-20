@@ -1,6 +1,6 @@
 package com.example.pmchamcong.service.timekeeping.log;
 
-import com.example.pmchamcong.entity.Employee;
+import com.example.pmchamcong.service.hrsystem.entity.Worker;
 import com.example.pmchamcong.service.timekeeping.log.entity.TimekeepingLog;
 import com.example.pmchamcong.service.timekeeping.log.entity.TimekeepingLogType;
 
@@ -12,10 +12,10 @@ public class LogService implements ILogService {
     private final ArrayList<TimekeepingLog> logs = seedLogs();
 
     @Override
-    public ArrayList<TimekeepingLog> getTimekeepingLogs(Employee employee) {
+    public ArrayList<TimekeepingLog> getTimekeepingLogs(Worker worker) {
         ArrayList<TimekeepingLog> results = new ArrayList<>();
         for (TimekeepingLog log : logs) {
-            if (Objects.equals(log.getEmployeeId(), employee.getId())) {
+            if (Objects.equals(log.getEmployeeId(), worker.getId())) {
                 results.add(log);
             }
         }

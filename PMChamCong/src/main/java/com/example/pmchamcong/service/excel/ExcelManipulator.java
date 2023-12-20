@@ -9,9 +9,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class ExcelManipulator {
-    public static void exportDataToXLSX(XLSData data, String fileName) {
+    public static void exportDataToXLSX(XLSData data, String filePath) {
         try {
-            String filePath = fileName + ".xls";
             // create a new file
             FileOutputStream out = new FileOutputStream(filePath);
             // create a new workbook

@@ -2,9 +2,9 @@ package com.example.pmchamcong;
 
 import com.example.pmchamcong.service.hrsystem.IHRSystem;
 import com.example.pmchamcong.service.hrsystem.entity.WorkerUnit;
-import com.example.pmchamcong.service.timekeeping.worker.IWorkerUnitTimekeepingReportService;
-import com.example.pmchamcong.service.timekeeping.worker.entity.WorkerTimekeepingResult;
-import com.example.pmchamcong.service.timekeeping.worker.entity.WorkerUnitTimekeepingReport;
+import com.example.pmchamcong.service.timekeeping.report.worker.IWorkerUnitTimekeepingReportService;
+import com.example.pmchamcong.service.timekeeping.report.worker.entity.WorkerTimekeepingSummary;
+import com.example.pmchamcong.service.timekeeping.report.worker.entity.WorkerUnitTimekeepingReport;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -16,33 +16,35 @@ import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.time.Month;
 
 public class WorkerUnitReportController {
     @FXML
     private ComboBox<WorkerUnit> cbUnits;
     @FXML
-    private ComboBox<String> cbMonths;
+    private ComboBox<Month> cbMonths;
     @FXML
-    private TableView<WorkerTimekeepingResult> table;
+    private TableView<WorkerTimekeepingSummary> table;
     @FXML
-    private TableColumn<WorkerTimekeepingResult, String> clId;
+    private TableColumn<WorkerTimekeepingSummary, String> clId;
     @FXML
-    private TableColumn<WorkerTimekeepingResult, String> clName;
+    private TableColumn<WorkerTimekeepingSummary, String> clName;
     @FXML
-    private TableColumn<WorkerTimekeepingResult, String> clUnit;
+    private TableColumn<WorkerTimekeepingSummary, String> clUnit;
     @FXML
-    private TableColumn<WorkerTimekeepingResult, Number> clTotalWorkHour;
+    private TableColumn<WorkerTimekeepingSummary, Number> clTotalWorkHour;
     @FXML
-    private TableColumn<WorkerTimekeepingResult, Number> clTotalOTHour;
+    private TableColumn<WorkerTimekeepingSummary, Number> clTotalOTHour;
     private Stage stage;
     private IHRSystem hrSystem;
     private IWorkerUnitTimekeepingReportService reportService;
     private WorkerUnitTimekeepingReport report;
-    private WorkerUnit currentUnit;
-    private String currentMonth;
+    private WorkerUnit selectedUnit;
+    private Month selectedMonth;
 
     public void export(ActionEvent event) throws IOException {
         Stage secondStage = new Stage();
@@ -51,11 +53,13 @@ public class WorkerUnitReportController {
         Scene scene = new Scene(loader.load());
         ExportWorkerUnitReportController controller = loader.getController();
         controller.initialize(secondStage, this.hrSystem, this.reportService);
+        if (selectedUnit != null) controller.selectDefaultUnit(selectedUnit);
+        if (selectedMonth != null) controller.selectDefaultMonth(selectedMonth);
 
-        secondStage.setTitle("Export Timekeeping Report");
+        secondStage.initModality(Modality.APPLICATION_MODAL);
+        secondStage.setTitle("Xuất báo cáo");
         secondStage.setScene(scene);
 
-        stage.hide();
         secondStage.show();
     }
 
@@ -70,29 +74,34 @@ public class WorkerUnitReportController {
         ObservableList<WorkerUnit> workerUnits = FXCollections.observableArrayList(hrSystem.getAllWorkerUnits());
         cbUnits.setItems(workerUnits);
         cbUnits.valueProperty().addListener(((observableValue, oldValue, newValue) -> {
-            currentUnit = observableValue.getValue();
+            selectedUnit = observableValue.getValue();
             fetchAndDisplayData();
         }));
 
-        ObservableList<String> months = FXCollections.observableArrayList();
-        for (int i = 0; i <= 12; i++) {
-            months.add(String.format("Tháng %d", i));
-        }
+        ObservableList<Month> months = FXCollections.observableArrayList();
+        months.add(Month.JANUARY);
+        months.add(Month.FEBRUARY);
+        months.add(Month.MARCH);
+        months.add(Month.APRIL);
+        months.add(Month.MAY);
+        months.add(Month.JUNE);
+        months.add(Month.JULY);
+        months.add(Month.AUGUST);
+        months.add(Month.SEPTEMBER);
+        months.add(Month.OCTOBER);
+        months.add(Month.NOVEMBER);
+        months.add(Month.DECEMBER);
         cbMonths.setItems(months);
-        cbUnits.setOnAction(event -> {
-            String selectedMonth = cbMonths.getSelectionModel().getSelectedItem();
-            if (selectedMonth != null) {
-                currentMonth = selectedMonth;
-            }
-        });
+        cbMonths.valueProperty().addListener(((observableValue, oldValue, newValue) -> {
+            selectedMonth = observableValue.getValue();
+            fetchAndDisplayData();
+        }));
     }
 
     private void fetchAndDisplayData() {
-            if (currentUnit == null) return;
-            System.out.println("Fetching");
-            System.out.println(currentUnit.getName());
-            report = reportService.getReport(currentUnit);
-            ObservableList<WorkerTimekeepingResult> results = FXCollections.observableArrayList(report.getResults());
+            if (selectedUnit == null || selectedMonth == null) return;
+            report = reportService.getReport(selectedUnit, selectedMonth);
+            ObservableList<WorkerTimekeepingSummary> results = FXCollections.observableArrayList(report.getSummaries());
             clId.setCellValueFactory(c -> new SimpleStringProperty(c.getValue().getEmployee().getId()));
             clName.setCellValueFactory(c -> new SimpleStringProperty(c.getValue().getEmployee().getName()));
             clUnit.setCellValueFactory(c -> new SimpleStringProperty(c.getValue().getEmployee().getUnit().getName()));

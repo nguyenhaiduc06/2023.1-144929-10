@@ -14,11 +14,11 @@ public class Application extends javafx.application.Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("main-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("dashboard-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         MainController controller = fxmlLoader.getController();
         controller.setPrimaryStage(primaryStage);
-        primaryStage.setTitle("Timekeeping Management System!");
+        primaryStage.setTitle("Phần mềm chấm công");
         primaryStage.setScene(scene);
         primaryStage.show();
     }

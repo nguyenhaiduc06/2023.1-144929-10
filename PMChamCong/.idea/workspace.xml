@@ -11,27 +11,27 @@
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/ExportWorkerUnitReportController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/MainController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/WorkerUnitReportController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/entity/Department.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/entity/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/entity/EmployeeTimekeepingResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/entity/Unit.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/csv/CSVData.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/csv/CSVManipulator.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/excel/ExcelManipulator.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/excel/XLSData.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/hrsystem/HRSystem.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/hrsystem/IHRSystem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/hrsystem/entity/Worker.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/hrsystem/entity/WorkerUnit.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/timekeeping/log/ILogService.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/timekeeping/log/LogService.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/timekeeping/log/entity/TimekeepingLog.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/timekeeping/log/entity/TimekeepingLogType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/timekeeping/worker/IWorkerUnitTimekeepingReportService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/timekeeping/worker/WorkerUnitTimekeepingReportService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/timekeeping/worker/entity/WorkerTimekeepingResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/timekeeping/worker/entity/WorkerUnitTimekeepingReport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/timekeeping/report/worker/IWorkerUnitTimekeepingReportService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/timekeeping/report/worker/WorkerUnitTimekeepingReportService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/timekeeping/report/worker/entity/WorkerTimekeepingSummary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/timekeeping/report/worker/entity/WorkerUnitTimekeepingReport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/timekeeping/result/IResultService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/timekeeping/result/ResultService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/timekeeping/result/WorkerTimekeepingResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pmchamcong/dashboard-view.fxml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pmchamcong/export-worker-unit-report-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pmchamcong/main-view.fxml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pmchamcong/worker-unit-report-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
