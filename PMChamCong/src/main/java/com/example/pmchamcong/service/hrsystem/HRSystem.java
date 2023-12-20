@@ -35,9 +35,11 @@ public class HRSystem implements IHRSystem {
         WorkerUnit cn1 = new WorkerUnit("CN1");
         WorkerUnit cn2 = new WorkerUnit("CN2");
         WorkerUnit cn3 = new WorkerUnit("CN3");
+        WorkerUnit cn4 = new WorkerUnit("CN4");
         workerUnits.add(cn1);
         workerUnits.add(cn2);
         workerUnits.add(cn3);
+        workerUnits.add(cn4);
 
         Worker e1 = new Worker("EM001", "Sophie Anderson", cn1);
         Worker e2 = new Worker("EM002", "Ryan Smith", cn1);
