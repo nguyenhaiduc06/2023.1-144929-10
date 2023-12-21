@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pmchamcong.MainController">
+   <left>
+      <VBox prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ddd;" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#viewTrangChu" prefHeight="48.0" prefWidth="244.0" text="Trang chủ" />
+            <Button mnemonicParsing="false" onAction="#importDataTimekeepingReport" prefHeight="48.0" prefWidth="222.0" text="Nhập dữ liệu chấm công" />
+            <Button mnemonicParsing="false" onAction="#viewWorkerUnitTimekeepingReport" prefHeight="48.0" prefWidth="200.0" text="Báo cáo chấm công &#10;đơn vị công nhân" textAlignment="CENTER" wrapText="true" />
+         </children></VBox>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
