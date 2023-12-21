@@ -6,10 +6,10 @@ import java.time.LocalDateTime;
 public class WorkerTimekeepingResult {
     private final String workerId;
     private final LocalDateTime date;
-    private final int totalWorkHour;
-    private final int totalOTHour;
+    private final long totalWorkHour;
+    private final long totalOTHour;
 
-    public WorkerTimekeepingResult(String workerId, LocalDateTime date, int totalWorkHour, int totalOTHour) {
+    public WorkerTimekeepingResult(String workerId, LocalDateTime date, long totalWorkHour, long totalOTHour) {
         this.workerId = workerId;
         this.date = date;
         this.totalWorkHour = totalWorkHour;
@@ -24,11 +24,11 @@ public class WorkerTimekeepingResult {
         return date;
     }
 
-    public int getTotalWorkHour() {
+    public long getTotalWorkHour() {
         return totalWorkHour;
     }
 
-    public int getTotalOTHour() {
+    public long getTotalOTHour() {
         return totalOTHour;
     }
 }

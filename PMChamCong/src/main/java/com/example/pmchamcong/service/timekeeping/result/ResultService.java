@@ -1,26 +1,58 @@
 package com.example.pmchamcong.service.timekeeping.result;
 
+import com.example.pmchamcong.database.Database;
+import com.example.pmchamcong.database.IDatabase;
+import com.example.pmchamcong.database.entity.TimekeepingLog;
+import com.example.pmchamcong.helper.Helper;
 import com.example.pmchamcong.service.hrsystem.entity.Worker;
 
 import java.sql.Timestamp;
+import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.Month;
-import java.util.ArrayList;
-import java.util.Objects;
-import java.util.Random;
+import java.util.*;
 
 public class ResultService implements IResultService {
+    private IDatabase database = new Database();
     private final ArrayList<WorkerTimekeepingResult> results = seedResults();
     @Override
     public ArrayList<WorkerTimekeepingResult> getWorkerTimekeepingResults(Worker worker, Month month) {
-        ArrayList<WorkerTimekeepingResult> filteredResults = new ArrayList<>();
-        for (WorkerTimekeepingResult result: results) {
-            if (Objects.equals(result.getWorkerId(), worker.getId()) && result.getDate().getMonth() == month) {
-                    filteredResults.add(result);
-                    System.out.println("Add");
+        ArrayList<TimekeepingLog> logs = database.getTimekeepingLogs(worker, month);
+        // Map Day of month to a HashMap. This HashMap map shift to and Array of check in and checkout time
+        HashMap<Integer, HashMap<Integer, LocalDateTime>> logTimes = new HashMap<>();
+        HashMap<Integer, HashMap<Integer, Duration>> listDurationByDay = new HashMap<>();
+        for (TimekeepingLog log: logs) {
+            LocalDateTime currentTimestamp = log.getTimestamp();
+            int day = currentTimestamp.getDayOfMonth();
+
+            if (!logTimes.containsKey(day)) {
+                logTimes.put(day, new HashMap<>());
+            }
+            if (!listDurationByDay.containsKey(day)) {
+                listDurationByDay.put(day, new HashMap<>());
+            }
+
+            HashMap<Integer, LocalDateTime> timestampsByShift = logTimes.get(day);
+            int shift = Helper.getWorkerShiftByTimestamp(log.getTimestamp());
+            if (!timestampsByShift.containsKey(shift)) {
+                timestampsByShift.put(shift, currentTimestamp);
+            } else {
+                LocalDateTime otherTimestamp = timestampsByShift.get(shift);
+                Duration duration = Duration.between(currentTimestamp, otherTimestamp);
+
+                listDurationByDay.get(day).put(shift, duration);
             }
         }
-        return filteredResults;
+        ArrayList<WorkerTimekeepingResult> results = new ArrayList<>();
+        for (HashMap.Entry<Integer, HashMap<Integer, Duration>> entry : listDurationByDay.entrySet()) {
+            Integer day = entry.getKey();
+            HashMap<Integer, Duration> durationByShift = entry.getValue();
+            long workHour = Math.abs(durationByShift.get(1).toHours() + durationByShift.get(2).toHours());
+            long otHour = Math.abs(durationByShift.get(2).toHours());
+            results.add(new WorkerTimekeepingResult(worker.getId(), LocalDateTime.of(2023, month, day, 0, 0), workHour, otHour));
+        }
+
+        return results;
     }
     private ArrayList<WorkerTimekeepingResult> seedResults() {
         ArrayList<WorkerTimekeepingResult> results = new ArrayList<>();

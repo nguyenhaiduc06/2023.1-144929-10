@@ -1,9 +1,9 @@
 package com.example.pmchamcong;
 
+import com.example.pmchamcong.database.Database;
+import com.example.pmchamcong.database.IDatabase;
 import com.example.pmchamcong.service.hrsystem.HRSystem;
 import com.example.pmchamcong.service.hrsystem.IHRSystem;
-import com.example.pmchamcong.service.timekeeping.log.ILogService;
-import com.example.pmchamcong.service.timekeeping.log.LogService;
 import com.example.pmchamcong.service.timekeeping.report.worker.IWorkerUnitTimekeepingReportService;
 import com.example.pmchamcong.service.timekeeping.report.worker.WorkerUnitTimekeepingReportService;
 import com.example.pmchamcong.service.timekeeping.result.IResultService;
@@ -21,9 +21,9 @@ import java.net.URL;
 
 public class MainController {
     private final IHRSystem hrSystem = new HRSystem();
-    private final ILogService logService = new LogService();
     private final IResultService resultService = new ResultService();
-    private final IWorkerUnitTimekeepingReportService workerUnitReportService = new WorkerUnitTimekeepingReportService(hrSystem, logService, resultService);
+    private final IDatabase database = new Database();
+    private final IWorkerUnitTimekeepingReportService workerUnitReportService = new WorkerUnitTimekeepingReportService(hrSystem);
     private Stage primaryStage;
     @FXML
     private BorderPane borderPane;
