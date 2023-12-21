@@ -14,7 +14,7 @@ import java.util.Objects;
 public class Database implements IDatabase{
     private ArrayList<TimekeepingLog> timekeepingLogs = new ArrayList<>();
     public Database() {
-        seed();;
+        seed();
     }
 
     @Override
