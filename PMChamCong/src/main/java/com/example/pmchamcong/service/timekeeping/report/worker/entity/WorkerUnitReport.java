@@ -4,11 +4,11 @@ import com.example.pmchamcong.service.hrsystem.entity.WorkerUnit;
 
 import java.util.ArrayList;
 
-public class WorkerUnitTimekeepingReport {
+public class WorkerUnitReport {
     private final WorkerUnit workerUnit;
     private final ArrayList<WorkerTimekeepingSummary> summaries;
 
-    public WorkerUnitTimekeepingReport(WorkerUnit workerUnit, ArrayList<WorkerTimekeepingSummary> summaries) {
+    public WorkerUnitReport(WorkerUnit workerUnit, ArrayList<WorkerTimekeepingSummary> summaries) {
         this.workerUnit = workerUnit;
         this.summaries = summaries;
     }

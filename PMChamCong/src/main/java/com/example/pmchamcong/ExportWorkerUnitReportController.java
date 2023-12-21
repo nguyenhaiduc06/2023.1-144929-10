@@ -6,9 +6,9 @@ import com.example.pmchamcong.service.excel.ExcelManipulator;
 import com.example.pmchamcong.service.excel.XLSData;
 import com.example.pmchamcong.service.hrsystem.IHRSystem;
 import com.example.pmchamcong.service.hrsystem.entity.WorkerUnit;
-import com.example.pmchamcong.service.timekeeping.report.worker.IWorkerUnitTimekeepingReportService;
+import com.example.pmchamcong.service.timekeeping.report.worker.IWorkerUnitReportService;
 import com.example.pmchamcong.service.timekeeping.report.worker.entity.WorkerTimekeepingSummary;
-import com.example.pmchamcong.service.timekeeping.report.worker.entity.WorkerUnitTimekeepingReport;
+import com.example.pmchamcong.service.timekeeping.report.worker.entity.WorkerUnitReport;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -48,14 +48,14 @@ public class ExportWorkerUnitReportController {
     private TableColumn<WorkerTimekeepingSummary, Number> clTotalOTHour;
     private Stage stage;
     private IHRSystem hrSystem;
-    private IWorkerUnitTimekeepingReportService reportService;
-    private WorkerUnitTimekeepingReport report;
+    private IWorkerUnitReportService reportService;
+    private WorkerUnitReport report;
     private WorkerUnit selectedUnit;
     private Month selectedMonth;
     private String selectedFormat;
     private String selectedFolder;
 
-    public void initialize(Stage stage, IHRSystem hrSystem, IWorkerUnitTimekeepingReportService reportService) {
+    public void initialize(Stage stage, IHRSystem hrSystem, IWorkerUnitReportService reportService) {
         this.stage = stage;
         this.hrSystem = hrSystem;
         this.reportService = reportService;

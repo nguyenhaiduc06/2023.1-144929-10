@@ -1,6 +1,5 @@
 package com.example.pmchamcong.service.timekeeping.report.worker;
 
-import com.example.pmchamcong.database.IDatabase;
 import com.example.pmchamcong.service.hrsystem.entity.Worker;
 import com.example.pmchamcong.service.csv.CSVData;
 import com.example.pmchamcong.service.excel.XLSData;
@@ -10,21 +9,21 @@ import com.example.pmchamcong.service.timekeeping.report.worker.entity.WorkerTim
 import com.example.pmchamcong.service.timekeeping.result.IResultService;
 import com.example.pmchamcong.service.timekeeping.result.ResultService;
 import com.example.pmchamcong.service.timekeeping.result.WorkerTimekeepingResult;
-import com.example.pmchamcong.service.timekeeping.report.worker.entity.WorkerUnitTimekeepingReport;
+import com.example.pmchamcong.service.timekeeping.report.worker.entity.WorkerUnitReport;
 
 import java.time.Month;
 import java.util.ArrayList;
 
-public class WorkerUnitTimekeepingReportService implements IWorkerUnitTimekeepingReportService {
+public class WorkerUnitReportService implements IWorkerUnitReportService {
     private final IHRSystem hrSystem;
     private final IResultService resultService = new ResultService();
 
-    public WorkerUnitTimekeepingReportService(IHRSystem hrSystem) {
+    public WorkerUnitReportService(IHRSystem hrSystem) {
         this.hrSystem = hrSystem;
     }
 
     @Override
-    public WorkerUnitTimekeepingReport getReport(WorkerUnit unit, Month month) {
+    public WorkerUnitReport getReport(WorkerUnit unit, Month month) {
         ArrayList<Worker> workers = hrSystem.getEmployeesByUnit(unit);
         ArrayList<WorkerTimekeepingSummary> summaries = new ArrayList<>();
         for (Worker worker : workers) {
@@ -41,11 +40,11 @@ public class WorkerUnitTimekeepingReportService implements IWorkerUnitTimekeepin
             WorkerTimekeepingSummary summary = new WorkerTimekeepingSummary(worker, totalWorkHour, totalOTHour);
             summaries.add(summary);
         }
-        return new WorkerUnitTimekeepingReport(unit, summaries);
+        return new WorkerUnitReport(unit, summaries);
     }
 
     @Override
-    public CSVData createCSVData(WorkerUnitTimekeepingReport report) {
+    public CSVData createCSVData(WorkerUnitReport report) {
         String[] header = {"Mã", "Tên", "Đơn vị", "Tổng số giờ làm việc", "Tổng số giờ tăng ca"};
         ArrayList<String[]> rows = new ArrayList<>();
         for (WorkerTimekeepingSummary summary: report.getSummaries()) {
@@ -56,7 +55,7 @@ public class WorkerUnitTimekeepingReportService implements IWorkerUnitTimekeepin
     }
 
     @Override
-    public XLSData createXLSData(WorkerUnitTimekeepingReport report) {
+    public XLSData createXLSData(WorkerUnitReport report) {
         String[] header = {"Mã", "Tên", "Đơn vị", "Tổng số giờ làm việc", "Tổng số giờ tăng ca"};
         ArrayList<String[]> rows = new ArrayList<>();
         for (WorkerTimekeepingSummary summary: report.getSummaries()) {

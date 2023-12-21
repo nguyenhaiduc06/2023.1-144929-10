@@ -2,9 +2,9 @@ package com.example.pmchamcong;
 
 import com.example.pmchamcong.service.hrsystem.IHRSystem;
 import com.example.pmchamcong.service.hrsystem.entity.WorkerUnit;
-import com.example.pmchamcong.service.timekeeping.report.worker.IWorkerUnitTimekeepingReportService;
+import com.example.pmchamcong.service.timekeeping.report.worker.IWorkerUnitReportService;
 import com.example.pmchamcong.service.timekeeping.report.worker.entity.WorkerTimekeepingSummary;
-import com.example.pmchamcong.service.timekeeping.report.worker.entity.WorkerUnitTimekeepingReport;
+import com.example.pmchamcong.service.timekeeping.report.worker.entity.WorkerUnitReport;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -20,6 +20,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
 import java.time.Month;
 
 public class WorkerUnitReportController {
@@ -41,8 +42,8 @@ public class WorkerUnitReportController {
     private TableColumn<WorkerTimekeepingSummary, Number> clTotalOTHour;
     private Stage stage;
     private IHRSystem hrSystem;
-    private IWorkerUnitTimekeepingReportService reportService;
-    private WorkerUnitTimekeepingReport report;
+    private IWorkerUnitReportService reportService;
+    private WorkerUnitReport report;
     private WorkerUnit selectedUnit;
     private Month selectedMonth;
 
@@ -63,7 +64,7 @@ public class WorkerUnitReportController {
         secondStage.show();
     }
 
-    public void initialize(Stage stage, IHRSystem hrSystem, IWorkerUnitTimekeepingReportService reportService) {
+    public void initialize(Stage stage, IHRSystem hrSystem, IWorkerUnitReportService reportService) {
         this.stage = stage;
         this.hrSystem = hrSystem;
         this.reportService = reportService;
@@ -77,6 +78,7 @@ public class WorkerUnitReportController {
             selectedUnit = observableValue.getValue();
             fetchAndDisplayData();
         }));
+        cbUnits.setValue(workerUnits.getFirst());
 
         ObservableList<Month> months = FXCollections.observableArrayList();
         months.add(Month.JANUARY);
@@ -96,6 +98,7 @@ public class WorkerUnitReportController {
             selectedMonth = observableValue.getValue();
             fetchAndDisplayData();
         }));
+        cbMonths.setValue(LocalDateTime.now().getMonth());
     }
 
     private void fetchAndDisplayData() {

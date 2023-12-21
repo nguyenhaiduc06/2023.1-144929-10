@@ -4,15 +4,14 @@ import com.example.pmchamcong.database.Database;
 import com.example.pmchamcong.database.IDatabase;
 import com.example.pmchamcong.service.hrsystem.HRSystem;
 import com.example.pmchamcong.service.hrsystem.IHRSystem;
-import com.example.pmchamcong.service.timekeeping.report.worker.IWorkerUnitTimekeepingReportService;
-import com.example.pmchamcong.service.timekeeping.report.worker.WorkerUnitTimekeepingReportService;
+import com.example.pmchamcong.service.timekeeping.report.worker.IWorkerUnitReportService;
+import com.example.pmchamcong.service.timekeeping.report.worker.WorkerUnitReportService;
 import com.example.pmchamcong.service.timekeeping.result.IResultService;
 import com.example.pmchamcong.service.timekeeping.result.ResultService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
@@ -23,7 +22,7 @@ public class MainController {
     private final IHRSystem hrSystem = new HRSystem();
     private final IResultService resultService = new ResultService();
     private final IDatabase database = new Database();
-    private final IWorkerUnitTimekeepingReportService workerUnitReportService = new WorkerUnitTimekeepingReportService(hrSystem);
+    private final IWorkerUnitReportService workerUnitReportService = new WorkerUnitReportService(hrSystem);
     private Stage primaryStage;
     @FXML
     private BorderPane borderPane;
