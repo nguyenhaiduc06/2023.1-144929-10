@@ -36,4 +36,16 @@ public class Worker {
     public void setUnit(WorkerUnit workerUnit) {
         this.workerUnit = workerUnit;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        
+        Worker worker = (Worker) obj;
+        
+        return Objects.equals(id, worker.id)
+            && Objects.equals(name, worker.name)
+            && Objects.equals(workerUnit.getName(), worker.workerUnit.getName());
+    }
 }

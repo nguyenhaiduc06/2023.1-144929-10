@@ -21,10 +21,28 @@ public class HRSystemTest {
 
     @Test
     public void testGetEmployeesByValidUnit() {
-        // Test case: workerUnit = cn1 (đơn vị hợp lệ trả về ds nhân viên)
+        // Test case: workerUnit = CN1 (đơn vị hợp lệ trả về danh sách nhân viên)
         WorkerUnit validUnit = new WorkerUnit("CN1");
         ArrayList<Worker> result = hrSystem.getEmployeesByUnit(validUnit);
+    
+        // Danh sách nhân viên kiểm tra
+        Worker e1 = new Worker("EM001", "Sophie Anderson", validUnit);
+        Worker e2 = new Worker("EM002", "Ryan Smith", validUnit);
+        Worker e3 = new Worker("EM003", "Ella Miller", validUnit);
+        Worker e4 = new Worker("EM004", "David Rodriguez", validUnit);
+        Worker e5 = new Worker("EM005", "Grace Walker", validUnit);
+        Worker e6 = new Worker("EM006", "Jordan Turner", validUnit);
+    
+        // Kiểm tra độ dài danh sách
         assertEquals(6, result.size());
+    
+        // Kiểm tra từng nhân viên trong danh sách
+        assertTrue(result.contains(e1));
+        assertTrue(result.contains(e2));
+        assertTrue(result.contains(e3));
+        assertTrue(result.contains(e4));
+        assertTrue(result.contains(e5));
+        assertTrue(result.contains(e6));
     }
 
     @Test
