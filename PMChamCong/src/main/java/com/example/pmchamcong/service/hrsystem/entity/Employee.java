@@ -1,5 +1,7 @@
 package com.example.pmchamcong.service.hrsystem.entity;
 
+import java.util.Objects;
+
 public class Employee {
     private String id;
     private String name;

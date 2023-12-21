@@ -20,8 +20,6 @@ public class Worker extends Employee {
 
         Worker worker = (Worker) obj;
 
-        return Objects.equals(id, worker.id)
-            && Objects.equals(name, worker.name)
-            && Objects.equals(workerUnit.getName(), worker.workerUnit.getName());
+        return Objects.equals(this.getId(), worker.getId());
     }
 }
