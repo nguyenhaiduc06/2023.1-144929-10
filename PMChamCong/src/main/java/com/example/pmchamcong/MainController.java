@@ -36,8 +36,13 @@ public class MainController {
 
     }
 
-    public void importDataTimekeepingReport(ActionEvent actionEvent) {
-
+    public void importDataReport(ActionEvent actionEvent) {
+        URL fxmlUrl = Application.class.getResource("data-import-view.fxml");
+        if (fxmlUrl != null) {
+            DataImportController controller = navigate(fxmlUrl);
+        } else {
+            System.err.println("FXML file not found!");
+        }
     }
 
     public void viewWorkerUnitTimekeepingReport(ActionEvent actionEvent) throws IOException {
@@ -54,7 +59,6 @@ public class MainController {
             return loader.getController();
         }
         catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
             return null;
         }

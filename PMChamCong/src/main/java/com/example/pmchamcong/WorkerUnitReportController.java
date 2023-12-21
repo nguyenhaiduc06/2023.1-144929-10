@@ -48,18 +48,15 @@ public class WorkerUnitReportController {
 
     public void export(ActionEvent event) throws IOException {
         Stage secondStage = new Stage();
-
         FXMLLoader loader = new FXMLLoader(Application.class.getResource("export-worker-unit-report-view.fxml"));
         Scene scene = new Scene(loader.load());
         ExportWorkerUnitReportController controller = loader.getController();
         controller.initialize(secondStage, this.hrSystem, this.reportService);
         if (selectedUnit != null) controller.selectDefaultUnit(selectedUnit);
         if (selectedMonth != null) controller.selectDefaultMonth(selectedMonth);
-
         secondStage.initModality(Modality.APPLICATION_MODAL);
         secondStage.setTitle("Xuất báo cáo");
         secondStage.setScene(scene);
-
         secondStage.show();
     }
 
