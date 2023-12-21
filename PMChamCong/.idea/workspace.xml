@@ -4,46 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="2213f735-b83f-4890-8ae5-f6b043c9a56b" name="Changes" comment="Init" />
-=======
-    <list default="true" id="2213f735-b83f-4890-8ae5-f6b043c9a56b" name="Changes" comment="Init">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/ExportWorkerUnitReportController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/MainController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/WorkerUnitReportController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/database/Database.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/database/IDatabase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/database/entity/TimekeepingLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/database/entity/TimekeepingLogType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/helper/Helper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/csv/CSVData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/csv/CSVManipulator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/excel/ExcelManipulator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/excel/XLSData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/hrsystem/HRSystem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/hrsystem/IHRSystem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/hrsystem/entity/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/hrsystem/entity/Worker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/hrsystem/entity/WorkerUnit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/timekeeping/report/worker/IWorkerUnitTimekeepingReportService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/timekeeping/report/worker/WorkerUnitTimekeepingReportService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/timekeeping/report/worker/entity/WorkerTimekeepingSummary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/timekeeping/report/worker/entity/WorkerUnitTimekeepingReport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/timekeeping/result/IResultService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/timekeeping/result/ResultService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/timekeeping/result/WorkerTimekeepingResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pmchamcong/dashboard-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pmchamcong/export-worker-unit-report-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pmchamcong/worker-unit-report-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-    </list>
->>>>>>> cc7fdb9dca5bba0672e7c08921ba2f14016a10e0
+    <list default="true" id="c6894d43-c231-4bc6-8246-ba2346d51bf4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,30 +44,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Application.executor": "Run",
-    "Application.HelloApplication.executor": "Run",
-    "Application.MainApplication.executor": "Run",
-<<<<<<< HEAD
-    "JUnit.HRSystemTest.testGetEmployeesByNullUnit.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/20231/TKXD/Project/2023.1-144929-10/PMChamCong",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
-=======
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true"
->>>>>>> cc7fdb9dca5bba0672e7c08921ba2f14016a10e0
   }
 }]]></component>
   <component name="RecentsManager">
