@@ -9,6 +9,7 @@
       <VBox prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ddd;" BorderPane.alignment="CENTER">
          <children>
             <Button mnemonicParsing="false" onAction="#viewTrangChu" prefHeight="26.0" prefWidth="244.0" text="Trang chu" />
+            <Button mnemonicParsing="false" onAction="#importDataTimekeepingReport" prefHeight="26.0" prefWidth="222.0" text="Nhap du lieu cham cong" />
             <Button mnemonicParsing="false" onAction="#viewWorkerUnitTimekeepingReport" prefHeight="26.0" prefWidth="227.0" text="Xem bao cao cham cong" />
          </children></VBox>
    </left>

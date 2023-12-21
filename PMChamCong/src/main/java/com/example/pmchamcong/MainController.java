@@ -36,6 +36,10 @@ public class MainController {
 
     }
 
+    public void importDataTimekeepingReport(ActionEvent actionEvent) {
+
+    }
+
     public void viewWorkerUnitTimekeepingReport(ActionEvent actionEvent) throws IOException {
         WorkerUnitReportController controller = navigate(Application.class.getResource("worker-unit-report-view.fxml"));
         controller.initialize(primaryStage, this.hrSystem, this.workerUnitReportService);

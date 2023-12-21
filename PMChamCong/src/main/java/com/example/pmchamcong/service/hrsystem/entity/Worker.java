@@ -2,6 +2,8 @@ package com.example.pmchamcong.service.hrsystem.entity;
 
 import com.example.pmchamcong.service.hrsystem.entity.WorkerUnit;
 
+import java.util.Objects;
+
 public class Worker {
     private String id;
     private String name;
