@@ -1,13 +1,14 @@
 package com.example.pmchamcong.service.timekeeping.report.worker;
 
+import com.example.pmchamcong.database.IDatabase;
 import com.example.pmchamcong.service.hrsystem.entity.Worker;
 import com.example.pmchamcong.service.csv.CSVData;
 import com.example.pmchamcong.service.excel.XLSData;
 import com.example.pmchamcong.service.hrsystem.IHRSystem;
 import com.example.pmchamcong.service.hrsystem.entity.WorkerUnit;
-import com.example.pmchamcong.service.timekeeping.log.ILogService;
 import com.example.pmchamcong.service.timekeeping.report.worker.entity.WorkerTimekeepingSummary;
 import com.example.pmchamcong.service.timekeeping.result.IResultService;
+import com.example.pmchamcong.service.timekeeping.result.ResultService;
 import com.example.pmchamcong.service.timekeeping.result.WorkerTimekeepingResult;
 import com.example.pmchamcong.service.timekeeping.report.worker.entity.WorkerUnitTimekeepingReport;
 
@@ -16,21 +17,16 @@ import java.util.ArrayList;
 
 public class WorkerUnitTimekeepingReportService implements IWorkerUnitTimekeepingReportService {
     private final IHRSystem hrSystem;
-    private final ILogService logService;
-    private final IResultService resultService;
+    private final IResultService resultService = new ResultService();
 
-    public WorkerUnitTimekeepingReportService(IHRSystem hrSystem, ILogService logService, IResultService resultService) {
+    public WorkerUnitTimekeepingReportService(IHRSystem hrSystem) {
         this.hrSystem = hrSystem;
-        this.logService = logService;
-        this.resultService = resultService;
     }
 
     @Override
     public WorkerUnitTimekeepingReport getReport(WorkerUnit unit, Month month) {
         ArrayList<Worker> workers = hrSystem.getEmployeesByUnit(unit);
         ArrayList<WorkerTimekeepingSummary> summaries = new ArrayList<>();
-        System.out.println("Selected month ");
-        System.out.println(month);
         for (Worker worker : workers) {
             ArrayList<WorkerTimekeepingResult> results = resultService.getWorkerTimekeepingResults(worker, month);
             if (results.isEmpty()) {

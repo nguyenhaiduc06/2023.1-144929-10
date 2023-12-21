@@ -11,18 +11,20 @@
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/ExportWorkerUnitReportController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/MainController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/WorkerUnitReportController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/database/Database.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/database/IDatabase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/database/entity/TimekeepingLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/database/entity/TimekeepingLogType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/helper/Helper.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/csv/CSVData.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/csv/CSVManipulator.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/excel/ExcelManipulator.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/excel/XLSData.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/hrsystem/HRSystem.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/hrsystem/IHRSystem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/hrsystem/entity/Employee.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/hrsystem/entity/Worker.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/hrsystem/entity/WorkerUnit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/timekeeping/log/ILogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/timekeeping/log/LogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/timekeeping/log/entity/TimekeepingLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/timekeeping/log/entity/TimekeepingLogType.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/timekeeping/report/worker/IWorkerUnitTimekeepingReportService.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/timekeeping/report/worker/WorkerUnitTimekeepingReportService.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pmchamcong/service/timekeeping/report/worker/entity/WorkerTimekeepingSummary.java" afterDir="false" />
@@ -75,19 +77,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Application.executor&quot;: &quot;Run&quot;,
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MainApplication.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Application.executor": "Run",
+    "Application.HelloApplication.executor": "Run",
+    "Application.MainApplication.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.example.pmchamcong.service.hrsystem.entity" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.example.pmchamcong" />
     </key>
