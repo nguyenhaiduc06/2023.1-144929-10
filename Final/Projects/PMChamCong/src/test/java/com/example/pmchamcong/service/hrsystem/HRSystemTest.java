@@ -8,9 +8,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.fail;
 
 public class HRSystemTest {
 
@@ -66,14 +64,7 @@ public class HRSystemTest {
     @Test
     public void testGetEmployeesByNullUnit() {
         // Test case: workerUnit = null (đơn vị rỗng)
-        try {
-            ArrayList<Worker> result = hrSystem.getEmployeesByUnit(null);
-            fail("Expected NullPointerException but no exception was thrown.");
-        } catch (NullPointerException e) {
-            // Kiểm tra xem có phải là NullPointerException không
-            assertNotNull(e);
-            // Kiểm tra xem thông báo lỗi có chứa đoạn text mong đợi không
-            assertTrue(e.getMessage().contains("Cannot invoke \"com.example.pmchamcong.service.hrsystem.entity.WorkerUnit.getName()\" because \"workerUnit\" is null"));
-        }
+        ArrayList<Worker> result = hrSystem.getEmployeesByUnit(null);
+        assertTrue(result.isEmpty());
     }
 }

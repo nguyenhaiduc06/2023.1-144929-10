@@ -1,7 +1,5 @@
 package com.example.pmchamcong.service.hrsystem.entity;
 
-import java.util.Objects;
-
 public class Worker extends Employee {
     private WorkerUnit workerUnit;
     public Worker(String id, String name, WorkerUnit workerUnit) {
@@ -11,15 +9,5 @@ public class Worker extends Employee {
 
     public WorkerUnit getUnit() {
         return workerUnit;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
-
-        Worker worker = (Worker) obj;
-
-        return Objects.equals(this.getId(), worker.getId());
     }
 }
