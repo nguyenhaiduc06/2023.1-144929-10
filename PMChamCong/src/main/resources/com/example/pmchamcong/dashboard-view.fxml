@@ -8,9 +8,15 @@
    <left>
       <VBox prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ddd;" BorderPane.alignment="CENTER">
          <children>
+<<<<<<< HEAD
+            <Button mnemonicParsing="false" onAction="#viewTrangChu" prefHeight="26.0" prefWidth="244.0" text="Trang chu" />
+            <Button mnemonicParsing="false" onAction="#importDataReport" prefHeight="26.0" prefWidth="222.0" text="Nhap du lieu cham cong" />
+            <Button mnemonicParsing="false" onAction="#viewWorkerUnitTimekeepingReport" prefHeight="26.0" prefWidth="227.0" text="Xem bao cao cham cong" />
+=======
             <Button mnemonicParsing="false" onAction="#viewTrangChu" prefHeight="48.0" prefWidth="244.0" text="Trang chủ" />
             <Button mnemonicParsing="false" onAction="#importDataTimekeepingReport" prefHeight="48.0" prefWidth="222.0" text="Nhập dữ liệu chấm công" />
             <Button mnemonicParsing="false" onAction="#viewWorkerUnitTimekeepingReport" prefHeight="48.0" prefWidth="200.0" text="Báo cáo chấm công &#10;đơn vị công nhân" textAlignment="CENTER" wrapText="true" />
+>>>>>>> 261a0cc3f86ea1b1c55e1d00bc8db7d241cc7a81
          </children></VBox>
    </left>
    <center>
