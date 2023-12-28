@@ -31,12 +31,8 @@ public class MainController {
         this.primaryStage = primaryStage;
     }
 
-    public void viewTrangChu(ActionEvent actionEvent) {
-
-    }
-
-    public void importDataTimekeepingReport(ActionEvent actionEvent) {
-
+    public void viewImportTimekeepingLog(ActionEvent actionEvent) {
+        navigate(Application.class.getResource("import-timekeeping-log-view.fxml"));
     }
 
     public void viewWorkerUnitTimekeepingReport(ActionEvent actionEvent) throws IOException {
