@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pmchamcong.ImportTimekeepingLogController">
+   <top>
+      <VBox prefHeight="42.0" prefWidth="600.0" spacing="16.0">
+         <children>
+            <Label prefHeight="23.0" prefWidth="479.0" text="Nhập dữ liệu chấm công">
+               <font>
+                  <Font name="SF Pro Text Bold" size="18.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#selectFile" text="Chọn file" />
+                  <Button mnemonicParsing="false" onAction="#saveData" text="Lưu dữ liệu" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+         </padding>
+      </VBox>
+   </top>
+   <center>
+      <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="clId" prefWidth="150.0" text="Mã" />
+            <TableColumn fx:id="clType" prefWidth="150.0" text="Vào/Ra" />
+            <TableColumn fx:id="clTimestamp" prefWidth="300.0" text="Giờ chấm công" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>
