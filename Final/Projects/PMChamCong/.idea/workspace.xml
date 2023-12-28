@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2213f735-b83f-4890-8ae5-f6b043c9a56b" name="Changes" comment="Init">
-      <change beforePath="$PROJECT_DIR$/../Final/Report cá nhân/20200170-NguyenHaiDuc/~$áo cáo.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +25,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -55,7 +56,12 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/ducnh/Documents/Study/20231/thiet-ke-xay-dung/2023.1-144929-10/PMChamCong"
+    "last_opened_file_path": "D:/20231/TKXD/Project/2023.1-144929-10",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -69,7 +75,7 @@
       <recent name="com.example.pmchamcong.entity" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Application">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.pmchamcong.Application" />
       <module name="PMChamCong" />
@@ -134,7 +140,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.1-openjdk-21.0.1-249ae16d76d6-69315bf7" />
+        <option value="jdk-21.0.1-openjdk-21.0.1-3183f394aec4-7d648f2c" />
       </set>
     </attachedChunks>
   </component>
@@ -150,6 +156,8 @@
       <workItem from="1703138712561" duration="6869000" />
       <workItem from="1703150851011" duration="170000" />
       <workItem from="1703151093654" duration="14000" />
+      <workItem from="1703769000412" duration="205000" />
+      <workItem from="1703769222604" duration="74000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <option name="closed" value="true" />
