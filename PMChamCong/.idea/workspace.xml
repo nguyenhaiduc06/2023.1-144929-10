@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9a3a221-d558-45e2-9d3b-e4e1c2fb7654" name="Changes" comment="" />
+    <list default="true" id="c9a3a221-d558-45e2-9d3b-e4e1c2fb7654" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Final/Projects/PMChamCong/src/main/java/com/example/pmchamcong/DepartmentReportController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Final/Projects/PMChamCong/src/main/java/com/example/pmchamcong/service/hrsystem/entity/RecordReport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Final/Projects/PMChamCong/src/main/java/com/example/pmchamcong/service/hrsystem/entity/RecordReportSummary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Final/Projects/PMChamCong/src/main/resources/com/example/pmchamcong/department-report-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Final/Projects/PMChamCong/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Final/Projects/PMChamCong/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Final/Projects/PMChamCong/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Final/Projects/PMChamCong/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Final/Projects/PMChamCong/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Final/Projects/PMChamCong/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Final/Projects/PMChamCong/src/main/java/com/example/pmchamcong/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Final/Projects/PMChamCong/src/main/java/com/example/pmchamcong/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Final/Projects/PMChamCong/src/main/java/com/example/pmchamcong/service/hrsystem/HRSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Final/Projects/PMChamCong/src/main/java/com/example/pmchamcong/service/hrsystem/HRSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Final/Projects/PMChamCong/src/main/java/com/example/pmchamcong/service/hrsystem/IHRSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Final/Projects/PMChamCong/src/main/java/com/example/pmchamcong/service/hrsystem/IHRSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Final/Projects/PMChamCong/src/main/resources/com/example/pmchamcong/dashboard-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../Final/Projects/PMChamCong/src/main/resources/com/example/pmchamcong/dashboard-view.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,22 +44,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;S:/study/tkxdpm/2023.1-144929-10/PMChamCong/src/main/java/com/example/pmchamcong&quot;,
-    &quot;last_opened_file_path&quot;: &quot;S:/code/Project3-Local/fe/easypos-frontend/easypos-frontend/pom.xml&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_directory_selection": "S:/study/tkxdpm/2023.1-144929-10/PMChamCong/src/main/java/com/example/pmchamcong",
+    "last_opened_file_path": "S:/study/tkxdpm/2023.1-144929-10/Final/Projects/PMChamCong/pom.xml",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.pmchamcong.service.hrsystem.entity" />
@@ -83,7 +95,7 @@
       <updated>1703505425929</updated>
       <workItem from="1703505428396" duration="3655000" />
       <workItem from="1703683743682" duration="6020000" />
-      <workItem from="1703760418661" duration="3305000" />
+      <workItem from="1703760418661" duration="4391000" />
     </task>
     <servers />
   </component>
