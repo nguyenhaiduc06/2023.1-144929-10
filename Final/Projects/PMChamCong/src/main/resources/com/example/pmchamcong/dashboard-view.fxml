@@ -10,6 +10,8 @@
          <children>
             <Button mnemonicParsing="false" onAction="#viewImportTimekeepingLog" prefHeight="48.0" prefWidth="222.0" text="Nhập dữ liệu chấm công" />
             <Button mnemonicParsing="false" onAction="#viewWorkerUnitTimekeepingReport" prefHeight="48.0" prefWidth="200.0" text="Báo cáo chấm công &#10;đơn vị công nhân" textAlignment="CENTER" wrapText="true" />
+            <Button mnemonicParsing="false" onAction="#viewDepartmentReport" prefHeight="26.0" prefWidth="227.0" text="Xem bccc theo bộ phận" />
+
          </children></VBox>
    </left>
    <center>

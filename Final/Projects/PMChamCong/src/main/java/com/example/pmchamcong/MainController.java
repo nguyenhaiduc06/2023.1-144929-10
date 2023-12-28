@@ -39,6 +39,12 @@ public class MainController {
         WorkerUnitReportController controller = navigate(Application.class.getResource("worker-unit-report-view.fxml"));
         controller.initialize(primaryStage, this.hrSystem, this.workerUnitReportService);
     }
+
+    public void viewDepartmentReport(ActionEvent actionEvent) {
+        DepartmentReportController controller = navigate(Application.class.getResource("department-report-view.fxml"));
+        controller.initialize(primaryStage, this.hrSystem);
+    }
+
     private <T> T navigate(URL url) {
         try {
             Parent root = null;

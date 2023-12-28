@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.Label?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.pmchamcong.DepartmentReportController"
+            prefHeight="400.0" prefWidth="600.0">
+    <top>
+        <VBox prefHeight="42.0" prefWidth="600.0" spacing="16.0">
+            <children>
+                <HBox prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label prefHeight="23.0" prefWidth="479.0" text="Báo cáo đơn vị công nhân">
+                            <font>
+                                <Font name="SF Pro Text Bold" size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <GridPane hgap="16.0" VBox.vgrow="ALWAYS">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                            <children>
+                                <Label text="Bộ phận" />
+                                <ComboBox fx:id="cbDepartmentNames" prefHeight="26.0" prefWidth="322.0" />
+                            </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+                            <children>
+                                <Label text="Tháng" />
+                                <ComboBox fx:id="cbMonths" prefHeight="26.0" prefWidth="296.0" />
+                            </children>
+                        </VBox>
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="16.0" top="16.0" />
+                    </VBox.margin>
+                </GridPane>
+            </children>
+            <padding>
+                <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+            </padding>
+        </VBox>
+    </top>
+    <center>
+       <VBox>
+           <TableView fx:id="table2" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <columns>
+                   <TableColumn fx:id="count"  prefWidth="125.0" text="Tổng số nhân viên" />
+                   <TableColumn fx:id="totalWork" prefWidth="210.6978530883789" text="Tổng số giờ làm việc của bộ phận" />
+                   <TableColumn fx:id="totalLate" prefWidth="210.19528198242188" text="Tổng số Số giờ đi trễ của bộ phận" />
+               </columns>
+           </TableView>
+           <TableView fx:id="table" prefHeight="250.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <columns>
+                   <TableColumn fx:id="clId" prefWidth="75.0" text="Mã" />
+                   <TableColumn fx:id="clName" prefWidth="154.6978530883789" text="Tên" />
+                   <TableColumn fx:id="clUnit" prefWidth="121.19528198242188" text="Bộ phận" />
+                   <TableColumn fx:id="clTotalWorkHour" prefWidth="126.80471801757812" text="Số giờ làm việc" />
+                   <TableColumn fx:id="clTotalLateHour" prefWidth="122.45712280273438" resizable="false" text="Số giờ đi trễ" />
+               </columns>
+           </TableView>
+       </VBox>
+    </center>
+
+</BorderPane>
