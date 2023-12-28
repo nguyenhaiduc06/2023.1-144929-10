@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9a3a221-d558-45e2-9d3b-e4e1c2fb7654" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Final/Projects/PMChamCong/src/main/java/com/example/pmchamcong/DepartmentReportController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Final/Projects/PMChamCong/src/main/java/com/example/pmchamcong/service/hrsystem/entity/RecordReport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Final/Projects/PMChamCong/src/main/java/com/example/pmchamcong/service/hrsystem/entity/RecordReportSummary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Final/Projects/PMChamCong/src/main/resources/com/example/pmchamcong/department-report-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Final/Projects/PMChamCong/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Final/Projects/PMChamCong/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Final/Projects/PMChamCong/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Final/Projects/PMChamCong/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Final/Projects/PMChamCong/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Final/Projects/PMChamCong/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Final/Projects/PMChamCong/src/main/java/com/example/pmchamcong/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Final/Projects/PMChamCong/src/main/java/com/example/pmchamcong/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Final/Projects/PMChamCong/src/main/java/com/example/pmchamcong/service/hrsystem/HRSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Final/Projects/PMChamCong/src/main/java/com/example/pmchamcong/service/hrsystem/HRSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Final/Projects/PMChamCong/src/main/java/com/example/pmchamcong/service/hrsystem/IHRSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Final/Projects/PMChamCong/src/main/java/com/example/pmchamcong/service/hrsystem/IHRSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Final/Projects/PMChamCong/src/main/resources/com/example/pmchamcong/dashboard-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../Final/Projects/PMChamCong/src/main/resources/com/example/pmchamcong/dashboard-view.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="c6894d43-c231-4bc6-8246-ba2346d51bf4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +13,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaFXApplication" />
+        <option value="Enum" />
+        <option value="Interface" />
         <option value="FxmlFile" />
         <option value="Class" />
       </list>
@@ -33,10 +24,17 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 0
+  &quot;associatedIndex&quot;: 8
 }</component>
-  <component name="ProjectId" id="2a28gLOSWvcfwLUg8pyuX6NZxHN" />
+  <component name="ProjectId" id="2Zl9JJLXs76E35kEOL3vuwtRaA5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -46,26 +44,35 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Application.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_directory_selection": "S:/study/tkxdpm/2023.1-144929-10/PMChamCong/src/main/java/com/example/pmchamcong",
-    "last_opened_file_path": "S:/study/tkxdpm/2023.1-144929-10/Final/Projects/PMChamCong/pom.xml",
+    "git-widget-placeholder": "Ducnt",
+    "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
+    <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="com.example.pmchamcong.service.hrsystem.entity" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.pmchamcong" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.pmchamcong.entity" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Application">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.pmchamcong.Application" />
       <module name="PMChamCong" />
@@ -79,27 +86,77 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.pmchamcong.HelloApplication" />
+      <module name="PMChamCong" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.pmchamcong.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HRSystemTest.testGetEmployeesByNullUnit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PMChamCong" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.pmchamcong.service.hrsystem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.pmchamcong.service.hrsystem" />
+      <option name="MAIN_CLASS_NAME" value="com.example.pmchamcong.service.hrsystem.HRSystemTest" />
+      <option name="METHOD_NAME" value="testGetEmployeesByNullUnit" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Application" />
+        <item itemvalue="JUnit.HRSystemTest.testGetEmployeesByNullUnit" />
+        <item itemvalue="Application.HelloApplication" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.1-openjdk-21.0.1-3183f394aec4-7d648f2c" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c9a3a221-d558-45e2-9d3b-e4e1c2fb7654" name="Changes" comment="" />
-      <created>1703505425929</created>
+      <changelist id="2213f735-b83f-4890-8ae5-f6b043c9a56b" name="Changes" comment="" />
+      <created>1702985728348</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1703505425929</updated>
-      <workItem from="1703505428396" duration="3655000" />
-      <workItem from="1703683743682" duration="6020000" />
-      <workItem from="1703760418661" duration="4391000" />
+      <updated>1702985728348</updated>
+      <workItem from="1703137818208" duration="731000" />
+      <workItem from="1703138712561" duration="6869000" />
     </task>
+    <task id="LOCAL-00001" summary="Init">
+      <option name="closed" value="true" />
+      <created>1702985745659</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1702985745659</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Init" />
+    <option name="LAST_COMMIT_MESSAGE" value="Init" />
   </component>
 </project>

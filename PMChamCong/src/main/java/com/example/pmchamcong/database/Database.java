@@ -3,8 +3,7 @@ package com.example.pmchamcong.database;
 import com.example.pmchamcong.database.entity.TimekeepingLog;
 import com.example.pmchamcong.database.entity.TimekeepingLogType;
 import com.example.pmchamcong.helper.Helper;
-import com.example.pmchamcong.service.hrsystem.entity.Employee;
-import com.example.pmchamcong.service.timekeeping.result.WorkerTimekeepingResult;
+import com.example.pmchamcong.service.hrsystem.entity.Worker;
 
 import java.time.LocalDateTime;
 import java.time.Month;
@@ -18,7 +17,7 @@ public class Database implements IDatabase{
     }
 
     @Override
-    public ArrayList<TimekeepingLog> getTimekeepingLogs(Employee employee, Month month) {
+    public ArrayList<TimekeepingLog> getTimekeepingLogs(Worker employee, Month month) {
         ArrayList<TimekeepingLog> logs = new ArrayList<>();
         for (TimekeepingLog log: timekeepingLogs) {
             if (Objects.equals(log.getEmployeeId(), employee.getId()) && log.getTimestamp().getMonth() == month) {

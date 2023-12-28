@@ -83,4 +83,17 @@ public class DataImportController {
         fc.getExtensionFilters().add(excelFilter);
         file = fc.showOpenDialog(stage);
     }
+
+
+    private void fetchAndDisplayData() {
+//        if () return;
+//        report = reportService.getReport(selectedUnit, selectedMonth);
+//        ObservableList<TimekeepingLog> results = FXCollections.observableArrayList(report.getSummaries());
+//        clId.setCellValueFactory(c -> new SimpleStringProperty(c.getValue().getEmployee().getId()));
+//        clName.setCellValueFactory(c -> new SimpleStringProperty(c.getValue().getEmployee().getName()));
+//        clUnit.setCellValueFactory(c -> new SimpleStringProperty(c.getValue().getEmployee().getUnit().getName()));
+//        clTotalWorkHour.setCellValueFactory(c -> new SimpleIntegerProperty(c.getValue().getTotalWorkHour()));
+//        clTotalOTHour.setCellValueFactory(c -> new SimpleIntegerProperty(c.getValue().getTotalOTHour()));
+//        table.setItems(results);
+    }
 }

@@ -15,11 +15,9 @@ public class TimekeepingLog {
     public String getEmployeeId() {
         return employeeId;
     }
-
     public LocalDateTime getTimestamp() {
         return timestamp;
     }
-
     public TimekeepingLogType getType() {
         return type;
     }
